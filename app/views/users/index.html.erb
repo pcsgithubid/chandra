@@ -1,0 +1,29 @@
+
+<div class="success_alert"><%= notice %></div>
+<h4>Available users</h4>
+<table>
+  <thead>
+  <th>S No</th>
+  <th width="100px">Name</th>
+  <th width="100px">mail</th>
+  <th width="100px">Options</th>
+  </thead>
+  <% @users.each do |u| %>
+  <tr>
+    <td><%= u.id %></td>
+    <td><%= u.name %></td>
+    <td><%= u.mail %></td>
+    <td id="content_<%= u.id %>">
+      <%= link_to "edit" , edit_user_path(u) , data: { confirm: "Are you sure?" } %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
+<a id="edit_user" href="#" onclick="editUser()">Paint it red</a>
+
+
+
+
+
+

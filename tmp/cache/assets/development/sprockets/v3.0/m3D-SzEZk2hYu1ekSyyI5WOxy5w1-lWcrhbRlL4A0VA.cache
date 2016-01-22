@@ -1,0 +1,5 @@
+I"p(function() {
+  this.myapp.controller('HomeCtrl', ['$scope', $scope, $scope.foo = 'bar']);
+
+}).call(this);
+:ET

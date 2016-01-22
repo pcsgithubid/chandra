@@ -1,0 +1,22 @@
+<div class="error_alert">
+  <% if @user.errors.any? %>
+      <h4>There are below errors</h4>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
+<div class="form_style_one">
+  <%= form_for @user do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br><br>
+      <%= f.label :mail %>
+      <%= f.text_field :mail %>
+      <br><br>
+      <%= f.submit "create user", class: 'button' %>
+      <%= link_to "Back" , users_path , :class=>"button" %>
+  <% end %>
+</div>

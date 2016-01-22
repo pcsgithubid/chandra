@@ -1,0 +1,12 @@
+I"(function() {
+  this.restauranteur = angular.module('restauranteur', []);
+
+  this.restauranteur.config([
+    '$routeProvider', $routeProvider, $routeProvider.otherwise({
+      templateUrl: '../templates/home.html',
+      controller: 'HomeCtrl'
+    })
+  ]);
+
+}).call(this);
+:ET
